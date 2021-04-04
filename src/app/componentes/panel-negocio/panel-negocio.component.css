@@ -1,0 +1,27 @@
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-top: 3px solid #0C0C64;
+    border-bottom: 3px solid #0C0C64;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2%;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.contenedor{
+    border-top: 7px solid #a70404;
+    border-bottom: 7px solid #a70404;
+    border-radius: 10px 10px 10px 10px;
+    padding: 2%;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+@media (max-width: 800px){
+    .contenido{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

@@ -1,0 +1,54 @@
+.cabecera {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-right: 5%;
+    margin-left: 5%;
+    
+}
+
+.m{
+    background-color: #0C0C64;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    margin-right: 8%;
+    width: 90%;
+    height: 35px;
+}
+
+.m:hover{
+    background-color: #05053b;
+}
+
+.o{
+    background-color: #a70404;
+    color: white;
+    border-radius: 8px 8px 8px 8px;
+    border: none;
+    margin-right: 8%;
+    width: 90%;
+    height: 35px;
+}
+
+.o:hover{
+    background-color: #6b0303;
+}
+
+.info{
+    text-align: center;
+}
+
+.datos{
+    border-top: 3px solid #0C0C64;
+    margin-left: 8%;
+    margin-right: 8%;
+    box-shadow: 0 0 5px;
+    border-radius: 10px 10px 10px 10px;
+}

@@ -1,0 +1,14 @@
+<div class="pedidos" *ngFor="let dt of produtos">
+    <img src="{{dt.imagenUrl}}" alt="">
+    <div class="info">
+        <p><strong>Nombre del Producto: </strong> {{dt.nombreProducto}} </p>
+        <h1 style="text-align: center; color: red;">PEDIDO</h1>
+        <div class="pd" *ngFor="let pd of pedidos">
+            <p> <strong>ID Cliente: </strong> {{pd.idCliente}}</p>
+            <p> <strong>Ciudad: </strong> {{pd.ciudad}}</p>
+            <p> <strong>Barrio: </strong> {{pd.barrio}}</p>
+            <p> <strong>Direccion: </strong> {{pd.direccion}}</p>
+            <p> <strong>Fecha de creacion: </strong> {{pd.fechaCreacion}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="cabecera">
+    <h4>Informacion de productos</h4>
+    <div class="btns">
+        <button class="m" (click)="mostrarL()">
+            Mostrar
+        </button>
+        <button class="o" (click)="ocultarL()">
+            Ocultar
+        </button>
+    </div>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="mostrar === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div class="info" *ngIf="mostrar === true">
+    <div class="datos" *ngFor="let dt of productos">
+        <img src="{{dt.imagenUrl}}" alt="">
+        <div class="items">
+            <p><strong>Nombre del Producto: </strong> {{dt.nombreProducto}} </p>
+            <p><strong>Descripcion: </strong> {{dt.descripcionProducto}} </p>
+            <p><strong>Precio: </strong> {{dt.precio}} </p>
+            <p><strong>Precio Domicilio: </strong> {{dt.precioDomicilio}} </p>
+            <p><strong>Estado: </strong> {{dt.estado}} </p>
+            <div class="btns">
+                <button class="m" (click)="listaDomiPto(dt.id)">
+                    Mostrar domicilio
+                </button>
+                <button class="o" (click)="ocultarD()">
+                    Ocultar
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class="domi" *ngIf="mostrarDomi === true">
+            <div class="dm" *ngFor="let dm of domicilios">
+                <p> <strong>ID Cliente: </strong> {{dm.idCliente}}</p>
+                <p> <strong>Ciudad: </strong> {{dm.ciudad}}</p>
+                <p> <strong>Barrio: </strong> {{dm.barrio}}</p>
+                <p> <strong>Direccion: </strong> {{dm.direccion}}</p>
+                <p> <strong>Fecha de creacion: </strong> {{dm.fechaCreacion}}</p>
+                <div class="btns">
+                    <button class="m" (click)="listaFactura(dm.idDomicilio)">
+                        Mostrar facturas
+                    </button>
+                    <button class="o" (click)="ocultarF()">
+                        Ocultar
+                    </button>
+                </div>
+                <br>
+                <div class="factura" *ngIf="mostrarFactura === true">
+                    <div class="ft" *ngFor="let fr of facturas">
+                        <p> <strong>Cantidad: </strong> {{fr.cantidad}}</p>
+                        <p><strong>Total a pagar: </strong>{{fr.totalPagar}}</p>
+                        <p><strong>Fecha: </strong>{{fr.fechaCreacion}}</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+            
+        </div>
+    </div>
+    <br>
+    
+    <div>
+        <p>facturas</p>
+    </div>
+</div>

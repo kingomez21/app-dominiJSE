@@ -1,0 +1,64 @@
+.cabecera{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0%;
+    text-align: center;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.m{
+    background-color: #0C0C64;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    height: 50px;
+}
+
+.m:hover{
+    background-color: #05053b;
+}
+
+.o{
+    background-color: #a70404;
+    color: white;
+    border-radius: 8px 8px 8px 8px;
+    border: none;
+    height: 50px;
+}
+
+.o:hover{
+    background-color: #6b0303;
+}
+
+img{
+    width: 80%;
+    height: 100%;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.datos{
+    text-align: center;
+}
+
+.dm{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.domi{
+    border-top: 3px solid #0C0C64;
+    border-bottom: 3px solid #0C0C64;
+}
+
+.factura{
+    border-top: 3px solid #0C0C64;
+    border-bottom: 3px solid #0C0C64;
+    margin-left: 8%;
+    margin-right: 8%;
+}

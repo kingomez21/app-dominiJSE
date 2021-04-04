@@ -1,0 +1,31 @@
+<div class="cabecera">
+    <h4>{{cod}}</h4>
+    <div class="btns">
+        <button class="m" (click)="mostrarF()">
+            Crear producto
+        </button>
+        <button class="o" (click)="ocultarF()">
+            Ocultar
+        </button>
+    </div>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="mostrar === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div *ngIf="mostrar === true" class="form">
+    <input type="text" placeholder="Nombre del producto" [(ngModel)]="nombreProducto" id="nombreProducto">
+    <br>
+    <input type="url" placeholder="ULR de la imagen" [(ngModel)]="imagenUrl" id="imagenUrl">
+    <br>
+    <textarea placeholder="Descripcion" [(ngModel)]='descripcion' id="descripcion" cols="30" rows="10"></textarea>
+    <br>
+    <input type="number" placeholder="Precio" [(ngModel)]='precio' id="precio">
+    <br>
+    <input type="number" placeholder="Precio del Domicilio" [(ngModel)]='precioDomicilio' id="precioDomicilio">
+    <br><br>
+    <button class="c" (click)="registrarProducto()">
+        Registrar
+    </button>
+</div>
+<br><br>

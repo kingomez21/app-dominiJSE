@@ -1,0 +1,28 @@
+<div class="cabecera">
+    <img src="assets/user.png" alt="" width="80%" height="80%">
+    <div class="dt-lg">
+        <p> <strong>ID: </strong>  {{usuario.identificacion}}</p>
+        <p> <strong>Nombre: </strong>  {{usuario.nombre}}</p>
+        <div class="btn">
+            <button class="m" (click) = "mostrarInfo()">
+                Mostrar Info
+            </button>
+            <button class="o" (click) = "ocultarInfo()">
+                Ocultar Info
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="info === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div class="info" *ngIf="info === true">
+    <div class="datos">
+        <p><strong>Identificacion: </strong> {{datos.identificacion}} </p>
+        <p><strong>Nombre: </strong> {{datos.nombre}} </p>
+        <p><strong>Correo: </strong> {{datos.correo}} </p>
+        <p><strong>Telefono: </strong> {{datos.telefono}} </p>
+        <p><strong>Fecha de creacion: </strong> {{datos.fechaCreacion}} </p>
+    </div>
+</div>

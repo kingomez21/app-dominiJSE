@@ -1,0 +1,50 @@
+<div class="contenido">
+    <br>
+    <button class="m" (click)="actualizar()">
+        Actualizar
+    </button>
+    <br><br>
+    <div class="data" *ngFor="let data of productos">
+        <h1>{{data.nombreProducto}}</h1>
+        <img src="{{data.imagenUrl}}" alt="">
+        <p>
+            <strong>Descripcion: </strong> {{data.descripcionProducto}}
+        </p>
+        <p><strong>Precio: $ </strong>{{data.precio}}</p>
+        <p><strong>Precio domicilio: $</strong> {{data.precioDomicilio}}</p>
+        <br>
+        <div class="btns">
+            <button class="m" (click)="mostrarProd()">
+                Pedir domicilio
+            </button>
+            <button class="o" (click)="ocultarProd()">
+                No hacer domicilio
+            </button>
+        </div>
+        
+        <br><br>
+        <div *ngIf="mostrarP === true" class="form">
+            <div class="form-domi">
+                <input type="text" placeholder="Ciudad" [(ngModel)]="ciudad" >
+                <br>
+                <input type="text" placeholder="Barrio" [(ngModel)]="barrio">
+                <br>
+                <input type="text" placeholder="Direccion" [(ngModel)]="direccion" >
+            </div>
+            <div class="form-factu">
+                <input type="number" placeholder="Cantidad" [(ngModel)]="cant">
+                <br><br>
+                <button class="t" (click)="total(data.precio, data.precioDomicilio)">
+                    Total a pagar
+                </button>
+                <p><strong>Total: $</strong>{{tot}}</p>
+            </div>
+        </div>
+        <br><br>
+        <button class="c" *ngIf="mostrarP === true" (click)="confirmarDomicilio(data.id, data.precio, data.precioDomicilio)">
+            Confirmar domicilio
+        </button>
+        <br><br>
+    </div>
+    
+</div>

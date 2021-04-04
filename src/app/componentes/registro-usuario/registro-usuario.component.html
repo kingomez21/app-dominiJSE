@@ -1,0 +1,32 @@
+<br><div class="formulario">
+    <img src="/assets/registroU.jpg" alt="registro usuarios">
+    <br>
+    <h1>Formulario de Registro</h1>
+    <h4>Ingrese su Identificacion</h4>
+    <input type="number" placeholder="Identificacion" [(ngModel)]='identificacion' id="identificacion">
+    <br>
+    <h4>Ingrese el nombre del Dueño.</h4>
+    <input type="text" placeholder="Nombre" [(ngModel)]="nombre" id="nombre">
+    <br>
+    <h4>Ingrese los Apellidos</h4>
+    <input type="text" placeholder="apellido" [(ngModel)]='apellido' id="apellido">
+    <br>
+    <h4>Ingrese el correo electronico</h4>
+    <input type="email" placeholder="Correo" [(ngModel)]='correo' id="correo">
+    <br>
+    <h4>Ingrese el numero celular</h4>
+    <input type="number" placeholder="numero celular" [(ngModel)]='telefono' id="telefono">
+    <br>
+    <h4>Ingrese la contraseña</h4>
+    <input type="password" placeholder="********" [(ngModel)]='contrasena' id="contrasena">
+    <br>
+    <h4>Confirmar contraseña</h4>
+    <input type="password" placeholder="********" [(ngModel)]='compContrasena' id="contra">
+    <br>
+    <br>
+    <button (click)="registro()">
+        Registrar
+    </button>
+    <br><br>
+    <a [routerLink]="['/login']">Volver</a>
+</div>

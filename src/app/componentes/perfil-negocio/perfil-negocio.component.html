@@ -1,0 +1,27 @@
+<div class="cabecera">
+    <img src="assets/negocio.jpg" alt="" width="80%" height="80%">
+    <div class="dt-lg">
+        <p> <strong>Nombre: </strong>  {{u.nombre}}</p>
+        <div class="btn">
+            <button class="m" (click) = "mostrarInfo()">
+                Mostrar Info
+            </button>
+            <button class="o" (click) = "ocultarInfo()">
+                Ocultar Info
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="mostrar === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div class="info" *ngIf="mostrar === true">
+    <div class="datos">
+        <p><strong>Identificacion del dueño: </strong> {{datos.identificacion}} </p>
+        <p><strong>Nombre: </strong> {{datos.nombre}} </p>
+        <p><strong>Correo: </strong> {{datos.correo}} </p>
+        <p><strong>Dueño: </strong> {{datos.dueno}} </p>
+        <p><strong>Fecha de creacion: </strong> {{datos.fechaCreacion}} </p>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="cabecera">
+    <h3> <strong>ID: </strong>{{identificacion}}</h3>
+    <button class="m" (click)="mostrarDomicilios()">
+        Mostrar Domicilios
+    </button>
+    <h3><strong>Cantidad: </strong> {{cantidad}} </h3>
+    <button class="o" (click)="ocultarDomicilios()">
+        Ocultar Domicilios
+    </button>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="mostrar === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div *ngIf="mostrar === true">
+    <div class="lista" *ngFor="let datos of lista">
+        <p> <strong>ID producto: </strong> {{datos.idProducto}}</p>
+        <p> <strong>Ciudad: </strong> {{datos.ciudad}}</p>
+        <p> <strong>Barrio: </strong> {{datos.barrio}}</p>
+        <p> <strong>Direccion: </strong> {{datos.direccion}}</p>
+        <p> <strong>Fecha de creacion: </strong> {{datos.fechaCreacion}}</p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="content-login">
+    <img src="/assets/imagenlogin.png" alt="">
+    <h4>Ingrese su correo electronico</h4>
+    <input type="email" placeholder="ejemplo@ejemplo.com" [(ngModel)]="correo" id="correo">
+    <h4>Ingrese su contraseña</h4>
+    <input type="password" placeholder="*******" [(ngModel)]="contrasena" id="contra">
+    <h4>Iniciar sesion como:</h4>
+    <div class="grip-btn">
+        <button (click)="loginUsuario()">
+            Usuario
+        </button>
+        <button (click)="loginNegocio()">
+            Negocio
+        </button>
+    </div>
+    <p>¿No tienes una cuenta?</p>
+    <p>Registrate</p>
+    <a [routerLink]="['/registro-negocio']" >Cueta de negocio</a> ---
+    <a [routerLink]="['/registro-usuario']" >Cuenta de Usuario</a>
+    <br><br>
+</div>

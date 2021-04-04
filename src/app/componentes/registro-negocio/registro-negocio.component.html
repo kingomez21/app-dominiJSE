@@ -1,0 +1,36 @@
+<br>
+<div class="formulario">
+    <img src="/assets/registro.png" alt="registro usuarios">
+    <br>
+    <h1>Formulario de Registro</h1>
+    <h4>Ingrese el codigo de su Negocio</h4>
+    <input type="text" placeholder="Codigo" [(ngModel)]="codigoNegocio" id="codigo">
+    <br>
+    <h4>Ingrese el nombre del Dueño.</h4>
+    <input type="text" placeholder="Dueño" [(ngModel)]="dueno" id="dueno">
+    <br>
+    <h4>Ingrese la identificacion del Dueño</h4>
+    <input type="number" placeholder="Identificacion" [(ngModel)]='identificacion' id="identificacion">
+    <br>
+    <h4>Ingrese el correo electronico del Dueño</h4>
+    <input type="email" placeholder="Correo" [(ngModel)]='correo' id="correo">
+    <br>
+    <h4>Ingrese el nombre del Negocio</h4>
+    <input type="text" placeholder="Nombre del Negocio" [(ngModel)]='nombreNegocio' id="nombreNegocio">
+    <br>
+    <h4>Ingrese el tipo de Negocio</h4>
+    <input type="text" placeholder="Tipo de Negocio" [(ngModel)]='tipoNegocio' id="tipoNegocio">
+    <br>
+    <h4>Ingrese la contraseña</h4>
+    <input type="password" placeholder="********" [(ngModel)]='contrasena' id="contrasena">
+    <br>
+    <h4>Confirmar contraseña</h4>
+    <input type="password" placeholder="********" [(ngModel)]='compContrasena' id="contra">
+    <br>
+    <br>
+    <button (click)="registro()">
+        Registrar
+    </button>
+    <br><br>
+    <a [routerLink]="['/login']">Volver</a>
+</div>

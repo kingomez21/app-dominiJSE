@@ -1,0 +1,72 @@
+<div class="cabecera">
+    <h4>{{cod}}</h4>
+    <div class="btns">
+        <button class="m" (click)="mostrarP()">
+            Mis productos
+        </button>
+        <button class="o" (click)="ocultarP()">
+            Ocultar lista
+        </button>
+    </div>
+</div>
+<br>
+<div style="text-align: center;" *ngIf="mostrar === false">
+    <h4>No se ha cargado nada.</h4>
+</div>
+<div *ngIf="mostrar === true">
+    <div class="datos" *ngFor="let dt of datos">
+        <img src="{{dt.imagenUrl}}" alt="">
+        <div class="info">
+            <p><strong>Nombre del Producto: </strong> {{dt.nombreProducto}} </p>
+            <p><strong>Descripcion: </strong> {{dt.descripcionProducto}} </p>
+            <p><strong>Precio: </strong> {{dt.precio}} </p>
+            <p><strong>Precio Domicilio: </strong> {{dt.precioDomicilio}} </p>
+            <p><strong>Estado: </strong> {{dt.estado}} </p>
+            <br>
+            <div class="btns">
+                <button class="e" (click)="mostrarE()">
+                    Cambiar estado
+                </button>
+                <button class="a" (click)="mostrarA()">
+                    Actualizar
+                </button>
+                <button class="d" (click)="eliminarProducto(dt.id)">
+                    Eliminar
+                </button>
+            </div>
+        </div>
+        <br>
+        <div class="actu" *ngIf="mostrarActualizar === true">
+            <input type="text" placeholder="{{dt.nombreProducto}}" [(ngModel)]="nombreProducto" id="nombreProducto">
+            <br>
+            <input type="url" placeholder="{{dt.imagenUrl}}" [(ngModel)]="imagenUrl" id="imagenUrl">
+            <br>
+            <textarea placeholder="{{dt.descripcionProducto}}" [(ngModel)]='descripcion' id="descripcion" cols="30"
+                rows="10"></textarea>
+            <br>
+            <input type="number" placeholder="{{dt.precio}}" [(ngModel)]='precio' id="precio">
+            <br>
+            <input type="number" placeholder="{{dt.precioDomicilio}}" [(ngModel)]='precioDomicilio' id="precioDomicilio">
+            <br><br>
+            <button class="a" (click)="actualizarProducto(dt.id, dt.estado)">
+                Guardar
+            </button>
+            <button class="d" (click)="ocultarA()">
+                Ocultar
+            </button>
+        </div>
+        <div class="estado" *ngIf="mostrarEstado === true">
+            <select  [(ngModel)]='estado' id="estado" >
+                <option value="true">Habilitar</option>
+                <option value="false">Deshabilitar</option>
+            </select>
+            <br><br><br>
+            <button class="e" (click)="cambiarEstado(dt.id, dt.nombreProducto, dt.imagenUrl, dt.descripcionProducto, dt.precio, dt.precioDomicilio)">
+                Cambiar estado
+            </button>
+            <button class="d" (click)="ocultarE()">
+                Ocultar
+            </button>
+        </div>
+    </div>
+</div>
